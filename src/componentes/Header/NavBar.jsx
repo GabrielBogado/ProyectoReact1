@@ -3,12 +3,13 @@ import CartWidget from './CartWidget'
 import "./NavBar.css"
 
 function NavBar() {
-    const Lists = [
+    /* Array con listado y links
+        const Lists = [
         {nombre: "Aire Acondicionado", link: "/"},
         {nombre: "Ventiladores", link:"/"},
         {nombre: "Estufas", link: "/"},
         {nombre: "Caloventores", link: "/"},
-];
+]; */
   return (
     <div className="navBar">
         <img src="/img/logo.png" alt="VeranOff" />
