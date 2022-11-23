@@ -12,14 +12,20 @@ function NavBar() {
 ]; */
   return (
     <div className="navBar">
-        <img src="/img/logo.png" alt="VeranOff" />
-            <ul>
-                <li><a href="#">Aire Acondicionado</a></li>
-                <li><a href="#">Ventiladores</a></li>
-                <li><a href="#">Estufas</a></li>
-                <li><a href="#">Caloventores</a></li>
-            </ul>
-        <CartWidget />
+            <div className="contenedorLogo">
+              <a href="/"><img src="/img/logo.png" alt="VeranOff" /></a>
+            </div>
+            <div className="contenedorLista">
+              <ul>
+                  <li><a href="/">Aire Acondicionado</a></li>
+                  <li><a href="/">Ventiladores</a></li>
+                  <li><a href="/">Estufas</a></li>
+                  <li><a href="/">Caloventores</a></li>
+              </ul>
+            </div>
+            <div className="contenedorCart">
+              <CartWidget />
+            </div>
     </div>
   )
 }

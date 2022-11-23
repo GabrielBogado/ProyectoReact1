@@ -2,12 +2,29 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: rgb(205, 243, 243);
+    background-color: blueviolet;
+    height: 10vh;
+    /* background-color: rgb(205, 243, 243); */
+}
+
+.contenedorLogo{
+    /* background-color: white; */
+    display: flex;
+    height: 100%;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
 }
 
 img{
     width: 50px;
     height: 50px;
+}
+
+.contenedorLista{
+    background-color: white;
+    display: flex;
+    align-items: center;
 }
 
 .navBar ul li{
