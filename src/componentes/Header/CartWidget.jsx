@@ -3,7 +3,7 @@ import "./CartWidget.css"
 
 function CartWidget() {
   return (
-    <div className="contenedorCarrito">🛒</div>
+    <a href="/" title='Ir al carrito'>🛒</a>
   )
 }
 

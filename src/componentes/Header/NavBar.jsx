@@ -13,7 +13,7 @@ function NavBar() {
   return (
     <div className="navBar">
             <div className="contenedorLogo">
-              <a href="/"><img src="/img/logo.png" alt="VeranOff" /></a>
+              <a href="/"><img src="/img/logo.png" alt="VeranOff" title='VeranOff' /></a>
             </div>
             <div className="contenedorLista">
               <ul>

@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     height: 10vh;
-    /* background-color: rgb(205, 243, 243); */
+    padding-bottom: 10px;
+    background-color: rgb(205, 243, 243);
+    border-bottom: 1px solid black;
 }
 
 .contenedorLogo{
@@ -22,18 +24,41 @@ img{
 }
 
 .contenedorLista{
-    background-color: white;
+    width: 60%;
     display: flex;
     align-items: center;
 }
 
-.navBar ul li{
+.navBar ul{
     list-style: none;
-    display: inline-block;
-    flex-direction: row;
-    padding-left: 10px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
+ .navBar ul li{
+    list-style: none;
+}
+
 .navBar ul li a{
     text-decoration: none;
     color: black;
+    font-weight: bold;
+    
+}
+
+.navBar ul li a:hover{
+    color: rgb(0, 25, 252);
+}
+
+.contenedorCart{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+}
+
+.contenedorCart a{
+    text-decoration: none;
 }
