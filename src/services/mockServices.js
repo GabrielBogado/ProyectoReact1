@@ -5,7 +5,6 @@ function cargarItems() {
     setTimeout(() => {
       resolve(productos);
     }, 3000);
-    reject("Error en carga de Productos");
   });
 }
 

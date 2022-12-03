@@ -6,7 +6,7 @@ function Item(props) {
   return (
       <div className="contenedorItem">
         <Toogle/>
-        <div className="contenedorImagen" key={props.key}>
+        <div className="contenedorImagen">
             <img src={props.img} title={props.nombre} alt="Imagen Producto"/>
         </div>
         <div className="detallesCarta">

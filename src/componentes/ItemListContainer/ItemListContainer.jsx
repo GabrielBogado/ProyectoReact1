@@ -9,7 +9,7 @@ function ItemListContainer() {
 
   
   useEffect(()=>{
-    cargarItems().then(respuesta => setProductos(respuesta)).catch((errorMensaje) =>{console.log("Error:", errorMensaje)})
+    cargarItems().then(respuesta => setProductos(respuesta))
   }, [])
 
   return (
