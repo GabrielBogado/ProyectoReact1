@@ -1,0 +1,14 @@
+.contenedorHero{
+    background-image: url("../../img/hero.jpg");
+    height: 90vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1{
+    margin: 0;
+}
+h4{
+    margin: 0;
+}
