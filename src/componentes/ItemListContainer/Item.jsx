@@ -5,13 +5,13 @@ import "./Item.css"
 function Item(props) {
   return (
       <div className="contenedorItem">
-        <Toogle/>
+        <Toogle className="acomodarToogle"/>
         <div className="contenedorImagen">
             <img src={props.img} title={props.nombre} alt="Imagen Producto"/>
         </div>
         <div className="detallesCarta">
             <h2>{props.nombre}</h2>
-            <h4>{props.precio}</h4>
+            <h4>$ {props.precio}</h4>
             <p className="tipo">{props.tipo}</p>
         </div>
     </div>
