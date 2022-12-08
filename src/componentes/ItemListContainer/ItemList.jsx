@@ -5,12 +5,14 @@ function ItemList(props) {
     return (
         <div className="contenedorCards">
         {props.productos.map( producto =>{
-            return <Item  img={producto.imagen}
-                          key={producto.id}
-                          nombre={producto.nombre}
-                          precio={producto.precio}
-                          tipo={producto.tipo}/>
-          })}
+            return <Item    img={producto.imagen}
+                            id={producto.id}
+                            key={producto.id}
+                            nombre={producto.nombre}
+                            precio={producto.precio}
+                            tipo={producto.tipo}
+                            categoria={producto.categoria}/>
+            })}
         </div>
     )
 }

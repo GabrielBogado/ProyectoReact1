@@ -1,7 +1,12 @@
+.linkEstilo{
+    text-decoration: none;
+    color: black;
+}
+
 .contenedorItem{
-    width: 150px;
-    height: auto;
-/*     background-color: yellowgreen; */
+    width: 200px;
+    height: 500px;
+    background-color: white;
     margin: 10px;
     padding: 3px;
     display: flex;
@@ -23,6 +28,10 @@
 .contenedorImagen img{
     height: 100%;
     width: 100%;
+}
+
+h2{
+    height: 100px;
 }
 
 .detallesCarta{
