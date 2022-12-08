@@ -7,9 +7,9 @@ function Item(props) {
   let urlID = `/item/${props.id}`
 
   return (
-    <Link className='linkEstilo' to={urlID}>
-      <div className="contenedorItem">
+    <div className="contenedorItem">
         <Toogle className="acomodarToogle"/>
+        <Link className='linkEstilo' to={urlID}>
         <div className="contenedorImagen">
             <img src={props.img} title={props.nombre} alt={props.nombre}/>
         </div>
@@ -18,8 +18,8 @@ function Item(props) {
             <h4>$ {props.precio}</h4>
             <p className="tipo">{props.tipo}</p>
         </div>
-    </div>
     </Link>
+    </div>
   )
 }
 

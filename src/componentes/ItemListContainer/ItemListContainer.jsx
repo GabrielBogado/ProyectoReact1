@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import"./ItemListContainer.css";
-import Hero from "../Hero/Hero"
+/* import Hero from "../Hero/Hero" */
 import cargarItems, {cargarCategoria} from '../../services/mockServices';
 import ItemList from './ItemList';
 import {useParams} from "react-router-dom"
@@ -27,7 +27,7 @@ function ItemListContainer() {
 
   return (
     <>
-    <Hero></Hero>
+    {/* <Hero></Hero> */}
     <ItemList productos={productos}/>
     </>
   )

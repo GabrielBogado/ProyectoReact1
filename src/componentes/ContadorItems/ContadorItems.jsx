@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import "./ContadorItems.css"
 
-function ContadorItems() {
-const [contador, setContador] = useState(0)
+function ContadorItems(props) {
+const [contador, setContador] = useState(1)
 
 function contadorSuma(){
   if(contador < props.stock)
@@ -14,7 +14,7 @@ function contadorResta(){
 }
 
 function agregarCarrito(){
-  console.log("Se agrego a carrito")
+  alert("Se agrego correctamente al carrito")
 }
 
   return (
