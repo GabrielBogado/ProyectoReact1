@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 import "./ContadorItems.css"
 
-function ContadorItems(props) {
+function ContadorItems({onAddToCart, stock}) {
 const [contador, setContador] = useState(1)
 
 function contadorSuma(){
-  if(contador < props.stock)
+  if(contador < stock)
     setContador(contador + 1)
 }
 
@@ -13,9 +13,6 @@ function contadorResta(){
     setContador(contador - 1)
 }
 
-function agregarCarrito(){
-  alert("Se agrego correctamente al carrito")
-}
 
   return (
     <div className="contenedorDuo">
@@ -25,7 +22,7 @@ function agregarCarrito(){
         <button onClick={contadorSuma}>+</button>
     </div>
     <div className="contenedorBotonCompra">
-        <button onClick={agregarCarrito} className="botonCompra" title="Agregar al carrito">Agregar al Carrito</button>
+        <button onClick={()=>onAddToCart(contador)} className="botonCompra" title="Agregar al carrito">Agregar al Carrito</button>
     </div>
     </div>
   )

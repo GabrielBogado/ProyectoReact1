@@ -1,8 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {Link} from "react-router-dom"
 import "./itemDetail.css"
 import ContadorItems from '../ContadorItems/ContadorItems'
 
 function ItemDetail(props) {
+  const [countEnCart, setCountEnCart] = useState(0)
+
+  function handleAddToCart(count){
+    setCountEnCart(count)
+    alert(count)
+  }
+
   return (
     <div className="contenedorCardDetalle">
       <div className="contenedorImg"><img src={props.producto.imagen} alt={props.producto.nombre} title={props.producto.nombre} /></div>
@@ -12,7 +20,8 @@ function ItemDetail(props) {
         <h3>$ {props.producto.precio}</h3>
       </div>
       <div /* className="contenedorContadorDetail" */>
-        <ContadorItems stock={props.producto.stock}/>
+        <ContadorItems onAddToCart={handleAddToCart} stock={props.producto.stock}/>
+      <Link to="/cart">Ir al Carrito</Link>
       </div>
       </div>
   )

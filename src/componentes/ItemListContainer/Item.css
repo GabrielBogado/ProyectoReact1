@@ -19,7 +19,7 @@
 }
 
 .contenedorItem:hover{
-    border: double blue;
+    border: 1px solid rgb(4, 247, 154);
 }
 .contenedorImagen{
     width: 90%;

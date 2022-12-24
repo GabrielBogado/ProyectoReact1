@@ -1,9 +1,10 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 import "./CartWidget.css"
 
 function CartWidget() {
   return (
-    <a href="/" title='Ir al carrito'>🛒</a>
+    <Link to="/cart" title='Ir al carrito'>🛒</Link>
   )
 }
 
