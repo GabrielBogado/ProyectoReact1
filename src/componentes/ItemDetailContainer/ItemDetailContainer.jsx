@@ -5,14 +5,18 @@ import {useParams} from "react-router-dom"
 
 function ItemDetailContainer() {
     const [producto, setProducto]= useState([])
+    const [isLoading, setIsLoading] = useState(true)
     let idProducto = useParams().idProducto
 
     useEffect(()=>{
-        cargarUnicoItem(idProducto).then((respueta)=>{setProducto(respueta)}).catch((error)=> console.error(error))
+        cargarUnicoItem(idProducto).then((respueta)=>{setProducto(respueta); setIsLoading(false)}).catch((error)=> 
+        console.error(error))
     }, [idProducto])
 
   return (
-    <ItemDetail producto={producto}/>
+    <>
+    {isLoading ? <h3>CARGANDO . . . </h3> : <ItemDetail producto={producto}/>}
+    </>
   )
 }
 

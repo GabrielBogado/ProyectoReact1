@@ -8,16 +8,17 @@ import {useParams} from "react-router-dom"
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
   let categoriaID = useParams().categoriaID
   
   useEffect(()=>{
 
     if(categoriaID){
-      cargarCategoria(categoriaID).then((respuestaCategoria)=> setProductos(respuestaCategoria))
+      cargarCategoria(categoriaID).then((respuestaCategoria)=> { setProductos(respuestaCategoria); setIsLoading(false)})
     }
     else{
       cargarItems()
-      .then(respuesta => setProductos(respuesta))
+      .then(respuesta => {setProductos(respuesta); setIsLoading(false)})
       .catch((error)=> console.error(error))
 
     }
@@ -27,8 +28,7 @@ function ItemListContainer() {
 
   return (
     <>
-    {/* <Hero></Hero> */}
-    <ItemList productos={productos}/>
+    {isLoading ? <h3>CARGANDO . . . </h3> : <ItemList productos={productos}/>}
     </>
   )
 }

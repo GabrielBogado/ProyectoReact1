@@ -15,7 +15,8 @@ function ItemDetail(props) {
 
   return (
     <div className="contenedorCardDetalle">
-      <div className="contenedorImg"><img src={props.producto.imagen} alt={props.producto.nombre} title={props.producto.nombre} /></div>
+      <div className="contenedorImg"><img src={props.producto.imagen} alt={props.producto.nombre} 
+      title={props.producto.nombre} /></div>
     <div className='contenedorDetail'>
         <h1>{props.producto.nombre}</h1>
         <p>{props.producto.tipo}</p>

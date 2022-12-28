@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
-import { Link } from 'react-router-dom'
 import { cartContexto } from '../../Storage/ContextCart'
+import { Link } from 'react-router-dom'
 import "./CartWidget.css"
 
 function CartWidget() {
@@ -10,7 +10,9 @@ function CartWidget() {
     <div>
       <Link to="/cart">
       <span>🛒</span>
-      <span className='contadorCartNoti'>{cantidad}</span>
+      {
+      cantidad > 0 && <span className='contadorCartNoti'>{cantidad}</span>
+    }
       </Link>
     </div>
   )

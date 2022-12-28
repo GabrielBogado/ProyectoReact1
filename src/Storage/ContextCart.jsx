@@ -21,9 +21,15 @@ function CartContextProvider(props){
             newCart.push({...item, count:count})
             setCart(newCart)
         }
-        console.log(item, count)
+        /* console.log(item, count) */
         
     }
+
+
+    function contenidoCart(){
+        return(cart)
+    }
+
 
     function getQuantityCart(){
         return(cart.length)
@@ -32,7 +38,8 @@ function CartContextProvider(props){
         <Provider value={{
             cart,
             getQuantityCart,
-            addToCart
+            addToCart,
+            contenidoCart
             }}>
             {props.children}
         </Provider>
