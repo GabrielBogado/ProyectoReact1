@@ -1,0 +1,21 @@
+.artCartContainer{
+    display: flex;
+    flex-direction: row;
+    height: 30vh;
+    width: 700px;
+}
+
+.contenedorImgCart{
+    height: 40%;
+    width: 100%;
+}
+
+.contenedorImgCart img{
+    height: 100%;
+    width: 100%;
+}
+
+.contenedorDetalleCart{
+    display: flex;
+    flex-direction: row;
+}

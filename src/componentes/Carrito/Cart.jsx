@@ -1,5 +1,7 @@
 import React, {useContext} from 'react'
 import { cartContexto } from '../../Storage/ContextCart'
+import ArtList from './ArtList'
+import "./cart.css"
 
 
 
@@ -8,7 +10,9 @@ function Cart() {
   const cart = contextoCartInfo.contenidoCart()
   console.log(cart)
   return (
-    <div>Futuro Carrito</div>
+    <div>
+      <ArtList articulos={cart}/>
+    </div>
   )
 }
 
