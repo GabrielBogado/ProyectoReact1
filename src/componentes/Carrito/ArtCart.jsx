@@ -9,9 +9,10 @@ function ArtCart(props) {
         </div>
         <div className="contenedorDetalleCart">
             <h2>{props.nombre}</h2>
-            <h4>${props.precio}</h4>
             <p>{props.tipo}</p>
-            <p>{props.count}</p>
+            <h4>Precio por unidad: ${props.precio}</h4>
+            <p>Agregados al carrito: {props.count}</p>
+            <h3>Total: ${props.count * props.precio}</h3>
         </div>
 
     </div>
