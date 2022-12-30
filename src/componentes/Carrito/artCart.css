@@ -4,12 +4,13 @@
     height: 40vh;
     width: 100%;
     background-color: aqua;
+    margin-bottom: 10px;
+    border: solid 1px black;
 }
 
 .contenedorImgCart{
     height: 100%;
     width: 40%;
-    border: solid 1px black;
 }
 
 .contenedorImgCart img{
