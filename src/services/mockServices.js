@@ -1,23 +1,23 @@
 import productos from "../dataBase/productos";
 
-function cargarItems() {
+/* function cargarItems() {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(productos);
     }, 1000);
   });
-}
+} */
 
-export function cargarCategoria(categoriaID){
-  return new Promise((resolve, reject) =>{
-      let itemsCategoria = productos.filter(item =>{
-        return(item.categoria === categoriaID)
-      }) 
-      resolve(itemsCategoria)
-  })
-}
+/* export function cargarCategoria(categoriaID) {
+  return new Promise((resolve, reject) => {
+    let itemsCategoria = productos.filter((item) => {
+      return item.categoria === categoriaID;
+    });
+    resolve(itemsCategoria);
+  });
+} */
 
-export function cargarUnicoItem(idProducto) {
+/* export function cargarUnicoItem(idProducto) {
   let urlID = idProducto;
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -29,4 +29,4 @@ export function cargarUnicoItem(idProducto) {
     }, 500);
   });
 }
-export default cargarItems;
+export default cargarItems; */

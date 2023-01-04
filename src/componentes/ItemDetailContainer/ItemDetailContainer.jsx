@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {cargarUnicoItem} from '../../services/mockServices'
+import {cargarUnicoItem} from '../../services/firebase'
 import ItemDetail from '../ItemDetailContainer/ItemDetail'
 import {useParams} from "react-router-dom"
 

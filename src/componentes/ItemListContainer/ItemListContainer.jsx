@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import"./ItemListContainer.css";
 /* import Hero from "../Hero/Hero" */
-import cargarItems, {cargarCategoria} from '../../services/mockServices';
+import { cargarItems , cargarCategoria} from '../../services/firebase';
 import ItemList from './ItemList';
 import {useParams} from "react-router-dom"
-/* import productos from '../../dataBase/productos'; */
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([])
