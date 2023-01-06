@@ -32,3 +32,14 @@
     flex-direction: column;
     text-align: center;
 }
+
+.irCarrito{
+    text-decoration: none;
+    color: black;
+}
+
+.irCenter{
+    display: flex;
+    justify-content: center;
+
+}

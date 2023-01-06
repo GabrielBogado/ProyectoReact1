@@ -23,8 +23,7 @@ function ItemDetail(props) {
         <h3>$ {props.producto.precio}</h3>
       </div>
       <div /* className="contenedorContadorDetail" */>
-        <ContadorItems onAddToCart={handleAddToCart} stock={props.producto.stock}/>
-      <Link to="/cart">Ir al Carrito</Link>
+        { countEnCart > 0 ? <div className="contenedorDuo irCenter"><Link to="/cart" className='irCarrito'>Ir al Carrito</Link></div> : <ContadorItems onAddToCart={handleAddToCart} stock={props.producto.stock}/>}
       </div>
       </div>
   )
