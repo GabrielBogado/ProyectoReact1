@@ -18,7 +18,7 @@ function Cart() {
       }
       </div>
       {<div className='botonesArt'>
-      {cart.length > 0 ?  <div><h2>TOTAL: ${()=> totalCarrito()}</h2><button><Link to="/checkout">Terminar Compra</Link></button> <button onClick={()=> eliminarCart()}>Vaciar Carrito</button></div>: <button><Link to="/">Seguir Comprando</Link></button>}
+      {cart.length > 0 ?  <div><h2>TOTAL: ${totalCarrito()}</h2><button><Link to="/checkout">Terminar Compra</Link></button> <button onClick={()=> eliminarCart()}>Vaciar Carrito</button></div>: <button><Link to="/">Seguir Comprando</Link></button>}
     </div>}
     </>
   )

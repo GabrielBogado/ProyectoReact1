@@ -3,7 +3,7 @@ import { cartContexto } from '../../Storage/ContextCart'
 import "./artCart.css"
 
 function ArtCart(props) {
-const {eliminarItem} = useContext(cartContexto)
+const {eliminarItem, eliminarUnidad} = useContext(cartContexto)
 
   return (
     <div className='artCartContainer'>
@@ -19,6 +19,7 @@ const {eliminarItem} = useContext(cartContexto)
         </div>
         <div className="eliminarProductos">
           <button onClick={()=>eliminarItem(props.id)}>Eliminar producto</button>
+          <button onClick={()=>eliminarUnidad(props.id)}>x</button>
         </div>
 
     </div>

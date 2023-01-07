@@ -10,7 +10,6 @@ function ItemDetail(props) {
   function handleAddToCart(count){
     setCountEnCart(count)
     addToCart(props.producto, count)
-    console.log(countEnCart)
   }
 
   return (

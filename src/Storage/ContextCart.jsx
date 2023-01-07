@@ -39,8 +39,24 @@ function CartContextProvider(props){
         setCart(newCart)
     }
 
+    function eliminarUnidad(idToRemove){
+        let indexItemInCart = cart.findIndex(itemInCart => itemInCart.id === idToRemove)
+        const newCart = [...cart]
+        if (indexItemInCart !== -1)
+        {
+            if(newCart[indexItemInCart].count > 1){
+            newCart[indexItemInCart].count -= 1
+            setCart(newCart)
+        } else{
+            eliminarItem(idToRemove)
+        }
+        
+    }
+
+    }
+
     function totalCarrito(){
-        return cart.reduce((prev, ac)=> prev + ac.count * ac.price, 0)
+        return (cart.reduce((acc, elemento)=> acc + elemento.count * elemento.precio, 0))
     }
 
 
@@ -55,7 +71,8 @@ function CartContextProvider(props){
             contenidoCart,
             eliminarCart,
             eliminarItem,
-            totalCarrito
+            totalCarrito,
+            eliminarUnidad
             }}>
             {props.children}
         </Provider>
