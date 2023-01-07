@@ -7,18 +7,20 @@ import { Link } from 'react-router-dom'
 
 
 function Cart() {
-  const contextoCartInfo = useContext(cartContexto)
-  const cart = contextoCartInfo.contenidoCart()
-  
-  /* console.log(cart) */
+
+  const {cart, eliminarCart, totalCarrito} = useContext(cartContexto)
   return (
-    <div>
+    <>
+    <div className='artList'>
       {
         cart.length === 0 ? <></> : <ArtList articulos={cart}/>
 
       }
-      {cart.length > 0 ? <button><Link to="/checkout">Terminar Compra</Link></button> : <button><Link to="/">Seguir Comprando</Link></button>}
-    </div>
+      </div>
+      {<div className='botonesArt'>
+      {cart.length > 0 ?  <div><h2>TOTAL: ${()=> totalCarrito()}</h2><button><Link to="/checkout">Terminar Compra</Link></button> <button onClick={()=> eliminarCart()}>Vaciar Carrito</button></div>: <button><Link to="/">Seguir Comprando</Link></button>}
+    </div>}
+    </>
   )
 }
 

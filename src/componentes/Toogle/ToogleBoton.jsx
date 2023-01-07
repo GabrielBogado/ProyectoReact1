@@ -14,7 +14,7 @@ function agregarFavorito(){
 }
 
   return (
-    <button onClick={agregarFavorito} className={esFavorito ? "favBase favAgregado" : "favBase"}>🖤</button>
+    <button onClick={agregarFavorito} className={esFavorito ? "favBase favAgregado" : "favBase"}>🤍</button>
   )
 }
 

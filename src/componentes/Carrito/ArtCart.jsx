@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { cartContexto } from '../../Storage/ContextCart'
 import "./artCart.css"
 
 function ArtCart(props) {
+const {eliminarItem} = useContext(cartContexto)
+
   return (
     <div className='artCartContainer'>
         <div className="contenedorImgCart">
@@ -13,6 +16,9 @@ function ArtCart(props) {
             <h4>Precio por unidad: ${props.precio}</h4>
             <p>Agregados al carrito: {props.count}</p>
             <h3>Total: ${props.count * props.precio}</h3>
+        </div>
+        <div className="eliminarProductos">
+          <button onClick={()=>eliminarItem(props.id)}>Eliminar producto</button>
         </div>
 
     </div>

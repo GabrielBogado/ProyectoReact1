@@ -9,6 +9,7 @@ const Provider = cartContexto.Provider
 function CartContextProvider(props){
     const [cart, setCart] = useState ([])
 
+
     function addToCart(item, count){
         let indexItemInCart = cart.findIndex(itemInCart => itemInCart.id === item.id)
         const newCart = [...cart]
@@ -21,13 +22,25 @@ function CartContextProvider(props){
             newCart.push({...item, count:count})
             setCart(newCart)
         }
-        /* console.log(item, count) */
         
     }
 
 
     function contenidoCart(){
         return(cart)
+    }
+
+    function eliminarCart(){
+        return(setCart([]))
+    }
+
+    function eliminarItem(idToRemove){
+        const newCart = cart.filter((itemEnCart) => itemEnCart.id !== idToRemove)
+        setCart(newCart)
+    }
+
+    function totalCarrito(){
+        return cart.reduce((prev, ac)=> prev + ac.count * ac.price, 0)
     }
 
 
@@ -39,7 +52,10 @@ function CartContextProvider(props){
             cart,
             getQuantityCart,
             addToCart,
-            contenidoCart
+            contenidoCart,
+            eliminarCart,
+            eliminarItem,
+            totalCarrito
             }}>
             {props.children}
         </Provider>

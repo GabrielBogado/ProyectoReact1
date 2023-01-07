@@ -1,5 +1,12 @@
 .contenedorCartList{
     display: flex;
     flex-direction: column;
-    height: 40vh;
+    height: auto;
+}
+.artList{
+    height: auto;
+}
+
+.botonesArt{
+    height: 20px;
 }

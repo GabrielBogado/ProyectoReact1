@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import"./ItemListContainer.css";
-/* import Hero from "../Hero/Hero" */
 import { cargarItems , cargarCategoria} from '../../services/firebase';
 import ItemList from './ItemList';
 import {useParams} from "react-router-dom"
+import Hero from '../Hero/Hero';
 
 function ItemListContainer() {
   const [productos, setProductos] = useState([])
@@ -27,6 +27,10 @@ function ItemListContainer() {
 
   return (
     <>
+    {categoriaID ? <></> : <Hero/>}
+    <div className="tituloProductos">
+      <h2>Nuestros Productos</h2>
+    </div>
     {isLoading ? <h3>CARGANDO . . . </h3> : <ItemList productos={productos}/>}
     </>
   )

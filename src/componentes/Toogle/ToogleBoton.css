@@ -3,6 +3,8 @@
     background-color: white;
     border-radius: 15px;
     cursor: pointer;
+    border: 1px solid;
+    font-size: large;
 }
 
 .favAgregado{
