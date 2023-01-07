@@ -12,7 +12,7 @@ function App() {
     <CartContextProvider>
       <BrowserRouter>
         <div className="App">
-          {{/* <button onClick={cargaDeProductosFirebase}>export</button> boton para exportar productos */}}
+          {/* <button onClick={cargaDeProductosFirebase}>export</button> //boton para exportar productos */}
           <NavBar />
           <main>
             <Routes>
