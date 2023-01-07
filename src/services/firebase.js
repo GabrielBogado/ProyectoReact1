@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import productos from "../dataBase/productos";
 import {
   getFirestore,
   doc,
@@ -7,6 +8,7 @@ import {
   getDocs,
   query,
   where,
+  addDoc,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -63,4 +65,12 @@ export async function cargarCategoria(categoriaID) {
   });
 
   return dataCategori;
+}
+
+export async function cargaDeProductosFirebase() {
+  const collectionRef = collection(BD, "productos");
+  for (let producto of productos) {
+    let nuevoProducto = await addDoc(collectionRef, producto);
+    console.log(nuevoProducto.id);
+  }
 }

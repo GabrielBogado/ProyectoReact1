@@ -1,6 +1,5 @@
 const productos = [
   {
-    id: 1,
     nombre: "BGH SILENT AIR",
     precio: 72000,
     stock: 10,
@@ -9,7 +8,6 @@ const productos = [
     categoria: "aireacondicionado",
   },
   {
-    id: 2,
     nombre: "BGH TURBO AIR",
     precio: 102000,
     stock: 10,
@@ -27,7 +25,6 @@ const productos = [
     categoria: "aireacondicionado",
   },
   {
-    id: 4,
     nombre: "NEX FREE AIR",
     precio: 89000,
     stock: 10,
@@ -36,7 +33,6 @@ const productos = [
     categoria: "aireacondicionado",
   },
   {
-    id: 5,
     nombre: "SANSEI INVERTER",
     precio: 132000,
     stock: 10,
@@ -45,7 +41,6 @@ const productos = [
     categoria: "aireacondicionado",
   },
   {
-    id: 6,
     nombre: "PHILCO 2881",
     precio: 96000,
     stock: 10,
@@ -54,7 +49,6 @@ const productos = [
     categoria: "aireacondicionado",
   },
   {
-    id: 7,
     nombre: "TCL ELITE",
     precio: 93000,
     stock: 10,
@@ -63,7 +57,6 @@ const productos = [
     categoria: "aireacondicionado",
   },
   {
-    id: 8,
     nombre: "LILIANA VP16P",
     precio: 12600,
     stock: 10,
@@ -72,7 +65,6 @@ const productos = [
     categoria: "ventilador",
   },
   {
-    id: 9,
     nombre: "INDELPLAS IV16",
     precio: 7200,
     stock: 10,
@@ -81,7 +73,6 @@ const productos = [
     categoria: "ventilador",
   },
   {
-    id: 10,
     nombre: "PEABODY PE-VTR42",
     precio: 31800,
     stock: 10,
@@ -90,7 +81,6 @@ const productos = [
     categoria: "ventilador",
   },
   {
-    id: 11,
     nombre: "KANJI KJH-FH1209",
     precio: 10900,
     stock: 10,
@@ -99,7 +89,6 @@ const productos = [
     categoria: "ventilador",
   },
   {
-    id: 12,
     nombre: "AXEL AX-VTPOTAR",
     precio: 25900,
     stock: 10,
@@ -108,7 +97,6 @@ const productos = [
     categoria: "ventilador",
   },
   {
-    id: 13,
     nombre: "LILIANA VW2016",
     precio: 17300,
     stock: 10,
@@ -117,7 +105,6 @@ const productos = [
     categoria: "ventilador",
   },
   {
-    id: 14,
     nombre: "LILIANA CALOVENTOR",
     precio: 2500,
     stock: 10,
@@ -126,7 +113,6 @@ const productos = [
     categoria: "caloventor",
   },
   {
-    id: 15,
     nombre: "ESTUFA ELECTRICA CUARZO",
     precio: 4000,
     stock: 10,
@@ -135,7 +121,6 @@ const productos = [
     categoria: "estufa",
   },
   {
-    id: 16,
     nombre: "ESTUFA A GAS EMEGE",
     precio: 15000,
     stock: 10,
@@ -144,7 +129,6 @@ const productos = [
     categoria: "estufa",
   },
   {
-    id: 17,
     nombre: "CALOVENTOR DE PARED DREMTEAM",
     precio: 12000,
     stock: 10,
@@ -153,7 +137,6 @@ const productos = [
     categoria: "caloventor",
   },
   {
-    id: 18,
     nombre: "ESTUFA ELECTRICA 3 VELAS",
     precio: 9000,
     stock: 10,
@@ -162,7 +145,6 @@ const productos = [
     categoria: "estufa",
   },
   {
-    id: 19,
     nombre: "ESTUFA ELECTRICA 3 VELAS NUEVA",
     precio: 9000,
     stock: 10,
@@ -171,7 +153,6 @@ const productos = [
     categoria: "estufa",
   },
   {
-    id: 20,
     nombre: "CALOVENTOR PARED CON CONTROL",
     precio: 10000,
     stock: 10,
@@ -180,7 +161,6 @@ const productos = [
     categoria: "caloventor",
   },
   {
-    id: 21,
     nombre: "CALOVENTOR PIE",
     precio: 2000,
     stock: 10,
@@ -189,7 +169,6 @@ const productos = [
     categoria: "caloventor",
   },
   {
-    id: 22,
     nombre: "ESTUFA A GAS EMEGE EURO",
     precio: 12000,
     stock: 10,
