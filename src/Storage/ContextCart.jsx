@@ -1,4 +1,5 @@
 import {createContext, useState} from "react"
+import { alertaCarritoVacio } from "../componentes/Alertas/Alertas"
 
 const cartContexto = createContext({cart: []})
 
@@ -31,7 +32,10 @@ function CartContextProvider(props){
     }
 
     function eliminarCart(){
-        return(setCart([]))
+        return(
+            setCart([]),
+            alertaCarritoVacio()
+            )
     }
 
     function eliminarItem(idToRemove){

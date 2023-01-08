@@ -74,3 +74,9 @@ export async function cargaDeProductosFirebase() {
     console.log(nuevoProducto.id);
   }
 }
+
+export async function crearOrden(orden) {
+  const collectionRef = collection(BD, "orden");
+  let nuevaOrden = await addDoc(collectionRef, orden);
+  console.log("orden con id:", nuevaOrden.id);
+}
