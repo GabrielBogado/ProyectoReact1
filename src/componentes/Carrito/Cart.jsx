@@ -23,9 +23,12 @@ function Cart() {
       total:123,
       date: new Date()
     }
-    crearOrden(orden)
-    alertOrdenCreada()
-    eliminarCart()
+    crearOrden(orden).then(
+      (id)=>{
+        alertOrdenCreada(id)
+        eliminarCart()
+      }
+    )
   }
   return (
     <>

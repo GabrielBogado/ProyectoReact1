@@ -9,6 +9,8 @@ import {
   query,
   where,
   addDoc,
+  writeBatch,
+  documentId,
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -77,6 +79,25 @@ export async function cargaDeProductosFirebase() {
 
 export async function crearOrden(orden) {
   const collectionRef = collection(BD, "orden");
+  const collectionProductosRef = collection(BD, "productos");
+  let batch = writeBatch(BD);
+  let arrayIds = orden.productosComprados.map((itemEnCart) => itemEnCart.id);
+  const q = query(collectionProductosRef, where(documentId(), "in", arrayIds));
+  let snapShots = await getDocs(q);
+
+  snapShots.docs.forEach((doc) => {
+    let stockDisponible = doc.data().stock;
+    let ItemEnCart = orden.productosComprados.find(
+      (item) => item.id === doc.id
+    );
+    let contadorEnCart = ItemEnCart.count;
+    let nombreProducto = ItemEnCart.nombre;
+
+    if (stockDisponible < contadorEnCart)
+      throw new Error(`Stock no disponible del articulo: ${nombreProducto}`);
+    else batch.update(doc.ref, { stock: stockDisponible - contadorEnCart });
+  });
+  await batch.commit();
   let nuevaOrden = await addDoc(collectionRef, orden);
-  console.log("orden con id:", nuevaOrden.id);
+  return nuevaOrden.id;
 }
