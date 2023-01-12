@@ -90,7 +90,7 @@ export async function crearOrden(orden) {
     let ItemEnCart = orden.productosComprados.find(
       (item) => item.id === doc.id
     );
-    let contadorEnCart = ItemEnCart.count;
+    let contadorEnCart = ItemEnCart.cantidadProductos;
     let nombreProducto = ItemEnCart.nombre;
 
     if (stockDisponible < contadorEnCart)
