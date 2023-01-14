@@ -16,7 +16,7 @@ function Item(props) {
         <div className="detallesCarta">
             <h2>{props.nombre}</h2>
             <h4>$ {props.precio}</h4>
-            <p className="tipo">{props.tipo}</p>
+            <h5 className="tipo">{props.tipo}</h5>
         </div>
     </Link>
     </div>

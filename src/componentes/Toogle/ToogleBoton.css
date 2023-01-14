@@ -5,6 +5,8 @@
     cursor: pointer;
     border: 1px solid;
     font-size: large;
+    width: 30px;
+    justify-content: center;
 }
 
 .favAgregado{
