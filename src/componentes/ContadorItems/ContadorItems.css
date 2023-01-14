@@ -18,8 +18,9 @@
     height: 60%;
 }
 
-.contenedorContador button{
+.contenedorContador .bContador{
     height: 30px;
+    width: 30px;
     margin: 0px 10px;
     cursor: pointer;
 }
@@ -34,4 +35,18 @@
 
 .contenedorBotonCompra button{
     cursor: pointer;
+    height: 25px;
+}
+
+.sinStock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+
+.bVolver{
+    height: 30px;
+    width: auto;
+    padding: 0 15px;
 }
