@@ -9,22 +9,44 @@
 }
 
 .contenedorForm{
-    background-color: blue;
+    /* background-color: blue; */
     height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
 form{
-    
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
+    flex-direction: column;
     height: 100%;
 }
 
-label{
-    display: flex;
-    flex-direction: row;
+.contenedorInput{
     width: 100%;
+    /* background-color: yellow; */
+    display: flex;
+}
+
+.label{
+    font-size: 30px;
+    width: 20%;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    /* background-color: blueviolet; */
+    margin-right: 30px;
+}
+
+.contenedorInput input{
+    width: 70%;
+    font-size: 20px;
+    padding-left: 5px;
+    border-radius: 5px;
+}
+
+.contenedorInput input:focus{
+    border-color: rgb(0, 129, 242);
+    /* box-shadow: 0 1px 1px rgb(299, 103, 23)inset, 0 0 8px rgb(255,144,0); */
+    outline: 0 none;
 }

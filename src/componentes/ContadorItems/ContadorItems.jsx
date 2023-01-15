@@ -25,8 +25,11 @@ function contadorResta(){
   return (
     <div className="contenedorDuo">
       {fijo === 0?
-      <><p className='sinStock'>Sin Stock</p> <button className='bVolver' onClick={()=> navigateTo("/")}>Volver</button></> :
-      <><div className="contenedorContador">
+      <>
+      <p className='sinStock'>Sin Stock</p>
+      <button className='bVolver' onClick={()=> navigateTo("/")}>Volver</button></> :
+      <>
+      <div className="contenedorContador">
         <button className="bContador" onClick={contadorResta} disabled={contador === fijo}>-</button>
         <h3>{contador}</h3>
         <button className="bContador" onClick={contadorSuma}>+</button>

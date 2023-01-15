@@ -24,7 +24,22 @@ function Cart() {
       }
       </div>
       {<div className='botonesArt'>
-      {cart.length > 0 ?  <div><h2>TOTAL: ${totalCarrito()}</h2><button onClick={()=>navigateTo("/checkout")}>Terminar Compra</button> <button onClick={()=> eliminarCart()}>Vaciar Carrito</button></div>: <div className="carritoVacio"><h2>Su carrito esta vacio</h2><p>Para seguir comprando, navegue por las categorias o busque su producto</p><button onClick={()=> navigateTo("/")}>Seguir Comprando</button></div>}
+      {cart.length > 0 ?  
+      <div className="TCompra">
+        <div className="total">
+          <h2>TOTAL: ${totalCarrito()}</h2>
+        </div>
+        <div className="botonesTerminar">
+          <button className='bTerminar' onClick={()=>navigateTo("/checkout")}>Terminar Compra</button>
+          <button className='bVaciar' onClick={()=> eliminarCart()}>Vaciar Carrito</button>
+          <button className='bSeguir' onClick={()=> navigateTo("/")}>Seguir Comprando</button>
+          </div>
+        </div>:
+        <div className="carritoVacio">
+            <h2>Su carrito esta vacio</h2>
+            <p>Para seguir comprando, navegue por las categorias o busque su producto</p>
+            <button onClick={()=> navigateTo("/")}>Seguir Comprando</button>
+      </div>}
     </div>}
     </div>
   )

@@ -30,24 +30,30 @@ function CheckoutFormulario({onCheck}) {
     }
     return (
     <div className='contenedorCheck'>
-    <div className='contenedorForm'>
-        <form>
-        <InputForm
-            value={datoComprador.nombre}
-            name="nombre"
-            title="Nombre"
-            onChange={cargarInput}/>
-        <InputForm
-            value={datoComprador.email}
-            name="email"
-            title="Email"
-            onChange={cargarInput}/>
-        <InputForm
-            value={datoComprador.telefono}
-            name="telefono"
-            title="Telefono"
-            onChange={cargarInput}/>
-        </form>
+        <div className='contenedorForm'>
+            <form>
+                <InputForm
+                    value={datoComprador.nombre}
+                    name="nombre"
+                    title="Nombre"
+                    onChange={cargarInput}
+                    holder="Ingrese su nombre"
+                    type="text"/>
+                <InputForm
+                    value={datoComprador.email}
+                    name="email"
+                    title="Email"
+                    onChange={cargarInput}
+                    holder="Ingrese su mail"
+                    type="email"/>
+                <InputForm
+                    value={datoComprador.telefono}
+                    name="telefono"
+                    title="Telefono"
+                    onChange={cargarInput}
+                    holder="Ingrese su numero telefonico"
+                    type="number"/>
+            </form>
     </div>
     <div className="contenedorGenerar">
         <button onClick={onGenerador}>Generar orden</button>

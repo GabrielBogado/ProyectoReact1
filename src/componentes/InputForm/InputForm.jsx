@@ -3,11 +3,12 @@ import "../BotonesCarrito/checkout.css"
 
 function InputForm(props) {
     return (
-        <div>
-            <label>{props.title}</label>
+        <div className='contenedorInput'>
+            <label placeholder={props.holder} className='label'>{props.title}</label>
             <input 
             required
-            type="text"
+            type={props.type}
+            placeholder={props.holder}
             name={props.name} 
             value={props.value}
             onChange={props.onChange}

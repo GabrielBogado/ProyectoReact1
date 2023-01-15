@@ -42,4 +42,11 @@
     width: auto;
     padding: 5px;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+.eliminarProductos button:hover{
+    background-color: red;
+    transition: 0.5s;
+    color: white;
 }
