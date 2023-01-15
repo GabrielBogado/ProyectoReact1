@@ -50,3 +50,16 @@
     transition: 0.5s;
     color: white;
 }
+
+    @media(max-width: 600px){
+        .artCartContainer{
+            flex-direction: column;
+            height: auto;
+        }
+        .eliminarProductos button{
+            margin-top: 10px;
+        }
+        .contenedorImgCart{
+            margin-top: 10px;
+        }
+    }

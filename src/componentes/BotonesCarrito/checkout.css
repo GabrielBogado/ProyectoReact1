@@ -9,7 +9,6 @@
 }
 
 .contenedorForm{
-    /* background-color: blue; */
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -24,7 +23,6 @@ form{
 
 .contenedorInput{
     width: 100%;
-    /* background-color: yellow; */
     display: flex;
 }
 
@@ -34,7 +32,6 @@ form{
     text-align: center;
     font-weight: bold;
     display: inline-block;
-    /* background-color: blueviolet; */
     margin-right: 30px;
 }
 
@@ -47,6 +44,27 @@ form{
 
 .contenedorInput input:focus{
     border-color: rgb(0, 129, 242);
-    /* box-shadow: 0 1px 1px rgb(299, 103, 23)inset, 0 0 8px rgb(255,144,0); */
     outline: 0 none;
+}
+
+.contenedorGenerar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorGenerar button{
+    height: auto;
+    width: auto;
+    font-size: 20px;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.contenedorGenerar button:hover{
+    background-color: rgb(1, 221, 221);
+    transition: 0.5s;
+    color: white;
 }

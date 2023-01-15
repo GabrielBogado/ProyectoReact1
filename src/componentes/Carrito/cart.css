@@ -3,6 +3,7 @@
     flex-direction: column;
     min-height: auto;
 }
+
 .artList{
     height: auto;
 }
@@ -62,7 +63,7 @@
 
 .containerCart{
     background-color: rgb(205, 243, 243);
-    min-height: 90vh;
+    /* min-height: 100vh; */
 }
 
 .TCompra{
@@ -95,4 +96,10 @@
     background-color: yellowgreen;
     transition: 0.5s;
     color: white;
+}
+
+@media(max-width: 600px){
+    .botonesTerminar button{
+        margin-left: 10px;
+    }
 }

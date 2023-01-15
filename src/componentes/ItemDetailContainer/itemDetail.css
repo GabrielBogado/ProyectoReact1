@@ -24,10 +24,11 @@
 .contenedorDetail{
     background-color: white;
     margin: 0px 10px;
+    padding: 0 10px;
     border: solid 1px blue;
     border-radius: 10px;
     height: 250px;
-    width: 40%;
+    width: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -43,4 +44,13 @@
     display: flex;
     justify-content: center;
 
+}
+
+@media(max-width: 600px){
+    .contenedorCardDetalle{
+        flex-direction: column;
+    }
+    .contenedorDetail{
+        margin-top: 10px;
+    }
 }
