@@ -1,7 +1,7 @@
 .contenedorCartList{
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
+    min-height: auto;
 }
 .artList{
     height: auto;
