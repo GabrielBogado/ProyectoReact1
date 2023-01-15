@@ -2,7 +2,7 @@ import React, {useContext} from 'react'
 import { cartContexto } from '../../Storage/ContextCart'
 import ArtList from './ArtList'
 import "./cart.css"
-import { Link, useNavigate} from 'react-router-dom'
+import {  useNavigate} from 'react-router-dom'
 
 
 
@@ -13,17 +13,20 @@ function Cart() {
   let navigateTo = useNavigate()
   
   return (
-    <>
+    <div className='containerCart'>
     <div className='artList'>
+      <div className="tituloCarrito">
+        <h1>Mi carrito</h1>
+      </div>
       {
         cart.length === 0 ? <></> : <ArtList articulos={cart}/>
 
       }
       </div>
       {<div className='botonesArt'>
-      {cart.length > 0 ?  <div><h2>TOTAL: ${totalCarrito()}</h2><button onClick={()=>navigateTo("/checkout")}>Terminar Compra</button> <button onClick={()=> eliminarCart()}>Vaciar Carrito</button></div>: <button><Link to="/">Seguir Comprando</Link></button>}
+      {cart.length > 0 ?  <div><h2>TOTAL: ${totalCarrito()}</h2><button onClick={()=>navigateTo("/checkout")}>Terminar Compra</button> <button onClick={()=> eliminarCart()}>Vaciar Carrito</button></div>: <div className="carritoVacio"><h2>Su carrito esta vacio</h2><p>Para seguir comprando, navegue por las categorias o busque su producto</p><button onClick={()=> navigateTo("/")}>Seguir Comprando</button></div>}
     </div>}
-    </>
+    </div>
   )
 }
 

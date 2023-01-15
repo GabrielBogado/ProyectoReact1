@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import InputForm from '../InputForm/InputForm'
+import "./checkout.css"
 
 function CheckoutFormulario({onCheck}) {
     const [datoComprador, setDatoComprador] = useState({
@@ -28,8 +29,8 @@ function CheckoutFormulario({onCheck}) {
         onCheck(datoComprador)
     }
     return (
-    <>
-    <div>
+    <div className='contenedorCheck'>
+    <div className='contenedorForm'>
         <form>
         <InputForm
             value={datoComprador.nombre}
@@ -51,7 +52,7 @@ function CheckoutFormulario({onCheck}) {
     <div className="contenedorGenerar">
         <button onClick={onGenerador}>Generar orden</button>
     </div>
-    </>
+    </div>
     )
 }
 

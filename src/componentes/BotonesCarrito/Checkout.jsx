@@ -36,6 +36,7 @@ function TerminarCompra() {
   }
   return (
     <div className='redireccionCompra'>
+      <h1>Porfavor complete con sus datos:</h1>
       <CheckoutFormulario onCheck={crearOrdenCheckout}/>
     </div>
   )

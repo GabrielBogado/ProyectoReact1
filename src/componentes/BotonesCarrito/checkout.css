@@ -1,0 +1,30 @@
+.redireccionCompra{
+    min-height: 90vh;
+    background-color: rgb(205, 243, 243);
+}
+.redireccionCompra h1{
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedorForm{
+    background-color: blue;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+form{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+label{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}

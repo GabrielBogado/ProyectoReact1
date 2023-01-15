@@ -12,14 +12,13 @@ const {eliminarItem, eliminarUnidad} = useContext(cartContexto)
         </div>
         <div className="contenedorDetalleCart">
             <h2>{props.nombre}</h2>
-            <p>{props.tipo}</p>
             <h4>Precio por unidad: ${props.precio}</h4>
             <p>Agregados al carrito: {props.count}</p>
-            <h3>Total: ${props.count * props.precio}</h3>
+            <h3>Sub-Total: ${props.count * props.precio}</h3>
         </div>
         <div className="eliminarProductos">
           <button onClick={()=>eliminarItem(props.id)}>Eliminar producto</button>
-          <button onClick={()=>eliminarUnidad(props.id)}>x</button>
+          <button onClick={()=>eliminarUnidad(props.id)}>Eliminar unidad</button>
         </div>
 
     </div>

@@ -1,4 +1,5 @@
 import React from 'react'
+import "../BotonesCarrito/checkout.css"
 
 function InputForm(props) {
     return (
