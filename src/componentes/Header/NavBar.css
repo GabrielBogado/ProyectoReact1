@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* background-color: blueviolet; */
     height: 10vh;
     padding-bottom: 10px;
     background-color: rgb(205, 243, 243);
@@ -10,7 +9,6 @@
 }
 
 .contenedorLogo{
-    /* background-color: white; */
     display: flex;
     height: 100%;
     width: 20%;
@@ -36,7 +34,8 @@ img{
     justify-content: space-between;
     flex-wrap: wrap;
 }
- .navBar ul li{
+
+.navBar ul li{
     list-style: none;
 }
 

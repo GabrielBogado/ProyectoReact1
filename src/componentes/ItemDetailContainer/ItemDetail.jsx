@@ -1,5 +1,5 @@
 import React, { useState, useContext} from 'react'
-import {Link} from "react-router-dom"
+import {Link, useNavigate} from "react-router-dom"
 import "./itemDetail.css"
 import ContadorItems from '../ContadorItems/ContadorItems'
 import { cartContexto } from '../../Storage/ContextCart'
@@ -13,6 +13,7 @@ function ItemDetail(props) {
     addToCart(props.producto, count)
     alertaAgregadoCarrito(props.producto.nombre)
   }
+  let navigateTo = useNavigate()
 
   return (
     <div className="contenedorCardDetalle">
@@ -23,8 +24,13 @@ function ItemDetail(props) {
         <p>{props.producto.tipo}</p>
         <h3>$ {props.producto.precio}</h3>
       </div>
-      <div /* className="contenedorContadorDetail" */>
-        { countEnCart > 0 ? <div className="contenedorDuo irCenter"><Link to="/cart" className='irCarrito'>Ir al Carrito</Link></div> : <ContadorItems onAddToCart={handleAddToCart} stock={props.producto.stock}/>}
+      <div>
+        { countEnCart > 0 ?
+        <div className="contenedorDuo irCenter">
+          <Link to="/cart" className='irCarrito'>Ir al Carrito</Link>
+          <button className='bSeguir' onClick={()=> navigateTo("/")}>Seguir Comprando</button>
+        </div> :
+        <ContadorItems onAddToCart={handleAddToCart} stock={props.producto.stock}/>}
       </div>
       </div>
   )

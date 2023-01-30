@@ -1,0 +1,30 @@
+.loader-animation{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 15px auto;
+}
+
+.loader-animation > div{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: rgb(0, 66, 208);
+    margin: 3rem .5;
+    border-radius: 50%;
+    animation: loader-animation .6s infinite alternate;
+}
+
+@keyframes loader-animation{
+    to{
+        opacity: .1;
+        transform: translate3d(0, -1rem, 0);
+    }
+}
+
+.loader-animation > div:nth-child(2){
+    animation-delay: .2s;
+}
+
+.loader-animation >div:nth-child(3){
+    animation-delay: .4s;
+}

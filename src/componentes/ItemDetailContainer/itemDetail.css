@@ -54,3 +54,12 @@
         margin-top: 10px;
     }
 }
+
+.contenedorDuo button{
+    width: auto;
+    margin-top: 10px;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}

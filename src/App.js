@@ -6,6 +6,7 @@ import ItemDetailContainer from "./componentes/ItemDetailContainer/ItemDetailCon
 import { CartContextProvider } from "./Storage/ContextCart";
 import Cart from "./componentes/Carrito/Cart";
 import TerminarCompra from "./componentes/BotonesCarrito/Checkout";
+import Footer from "./componentes/Footer/Footer";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="/checkout" element={<TerminarCompra />} />
             </Routes>
           </main>
+          <Footer/>
         </div>
       </BrowserRouter>
     </CartContextProvider>

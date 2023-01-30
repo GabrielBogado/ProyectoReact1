@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import {cargarUnicoItem} from '../../services/firebase'
 import ItemDetail from '../ItemDetailContainer/ItemDetail'
 import {useParams} from "react-router-dom"
+import Loader from '../Loader/Loader'
 
 function ItemDetailContainer() {
     const [producto, setProducto]= useState([])
@@ -15,7 +16,7 @@ function ItemDetailContainer() {
 
   return (
     <>
-    {isLoading ? <h3>CARGANDO . . . </h3> :<><ItemDetail producto={producto}/></>}
+    {isLoading ? <Loader/> :<><ItemDetail producto={producto}/></>}
     </>
   )
 }

@@ -1,0 +1,18 @@
+.contenedorFooter{
+    height: 10vh;
+    width: 100%;
+    border-top: dotted 1px rgb(8, 118, 235);
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    justify-content: space-around;
+    margin-top: auto;
+}
+
+.contenedorGit{
+    border-radius: 50%;
+}
+.contenedorGit img{
+    border-radius: 50%;
+}
