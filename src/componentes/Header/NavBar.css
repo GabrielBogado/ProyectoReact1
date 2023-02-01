@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    height: 10vh;
     padding-bottom: 10px;
     background-color: rgb(205, 243, 243);
     border-bottom: 1px solid black;
@@ -25,6 +24,8 @@ img{
     width: 60%;
     display: flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .navBar ul{
@@ -56,8 +57,55 @@ img{
     align-items: center;
     justify-content: center;
     font-size: 40px;
+    height: 100%;
 }
 
 .contenedorCart a{
     text-decoration: none;
+}
+
+.menuHamburguesa{
+    display: none;
+}
+
+@media (max-width: 750px){
+    .svgButton{
+        width: 30px;
+        height: 30px;
+    }
+    .contenedorLista{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .menuHamburguesa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(205, 243, 243);
+        border:none;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+    
+    .navBar ul{
+        display: flex;
+        flex-wrap: nowrap;
+        opacity: 0;
+        height: 0vh;
+        overflow:hidden ;
+        transition: all .5s ease;
+    }
+    
+    .navBar ul li{
+        padding: 10px 0;
+    }
+    
+    .navBar .isActive{
+        height: 30vh;
+        flex-direction: column;
+        opacity: 1;
+        
+    }
 }
