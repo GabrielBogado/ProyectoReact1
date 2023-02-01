@@ -91,6 +91,7 @@ img{
     
     .navBar ul{
         display: flex;
+        flex-direction: column;
         flex-wrap: nowrap;
         opacity: 0;
         height: 0vh;
